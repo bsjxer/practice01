@@ -9,20 +9,16 @@ public class GuessNumber {
 		Scanner scanner = new Scanner( System.in );
 		Random r = new Random();
 		
-		String answer = scanner.next();
-		
-		int k = r.nextInt(100) + 1;
-		
 		while(true) {
 			int a=1;
 			int b=100;
-			int i = 1;
+			int k = r.nextInt(100) + 1;
 			
 			System.out.println("수를 결정하였습니다. 맞추어 보세요.");
-			
-			while(true) {
+
+			for( int i = 1; 1 < b; i++ ) {
 				System.out.println( a + "-" + b );
-				System.out.print(i +">>");
+				System.out.print( i + ">>" );
 				int g = scanner.nextInt();
 				
 				if( g == k ) {
@@ -37,8 +33,8 @@ public class GuessNumber {
 				}
 			}
 			
-			
 			System.out.print("다시하겠습니까(y/n)>>");
+			String answer = scanner.next();
 			if ( answer.equals("y")) {
 			} else {
 				break;
